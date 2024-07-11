@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravenous - Members</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile {
+            width: 150px;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .profile img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        .bio-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #eee;
+            padding: 20px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+            display: none;
+        }
+        .bio-popup img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Members</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="hoa.html">HOA</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="profile" onclick="showBio('Member 1', 'Lorem ipsum dolor sit amet.')">
+                <img src="https://cdn.discordapp.com/attachments/1255265897900408975/1257765940003606639/IMG_2324.jpg?ex=669176d0&is=66902550&hm=564795a6986d1e89901554722a07d0cdb7512055d4587be44c5fdeb81bc5f2e2" alt="Member 1">
+                <p>Member 1</p>
+            </div>
+            <!-- Repeat for other members -->
+        </section>
+
+        <!-- Bio Popup -->
+        <div id="bio-popup" class="bio-popup">
+            <span class="close-btn" onclick="closeBioPopup()">&times;</span>
+            <img id="bio-image" src="" alt="">
+            <h2 id="bio-name"></h2>
+            <p id="bio-text"></p>
+        </div>
+        
+    </div>
+
+    <script>
+        function showBio(name, bio) {
+            document.getElementById('bio-image').src = 'https://cdn.discordapp.com/attachments/1255265897900408975/1257765940003606639/IMG_2324.jpg?ex=669176d0&is=66902550&hm=564795a6986d1e89901554722a07d0cdb7512055d4587be44c5fdeb81bc5f2e2';
+            document.getElementById('bio-name').textContent = name;
+            document.getElementById('bio-text').textContent = bio;
+            document.getElementById('bio-popup').style.display = 'block';
+        }
+
+        function closeBioPopup() {
+            document.getElementById('bio-popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
