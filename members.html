@@ -100,10 +100,22 @@
             document.getElementById('bio-name').textContent = name;
             document.getElementById('bio-text').textContent = bio;
             document.getElementById('bio-popup').style.display = 'block';
+            
+            // Add event listener to close popup when clicking outside
+            document.addEventListener('click', closeBioPopupOutside);
         }
 
         function closeBioPopup() {
             document.getElementById('bio-popup').style.display = 'none';
+            // Remove the event listener when popup is closed
+            document.removeEventListener('click', closeBioPopupOutside);
+        }
+
+        function closeBioPopupOutside(event) {
+            // Close the popup if clicked outside of bio-popup
+            if (!event.target.closest('.bio-popup') && !event.target.closest('.profile')) {
+                closeBioPopup();
+            }
         }
     </script>
 </body>
