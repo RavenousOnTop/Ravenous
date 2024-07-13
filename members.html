@@ -41,6 +41,7 @@
             max-height: 80%;
             overflow: auto;
             display: none;
+            word-wrap: break-word; /* This enables text wrapping */
         }
         .bio-popup img {
             max-width: 100%;
@@ -76,7 +77,7 @@
                 <img src="https://cdn.discordapp.com/attachments/1233836657128509533/1261088708736847962/30827465.png?ex=6691afe2&is=66905e62&hm=bc319ba95a17c7adf857c45b77e1a4d688cecbe3296fe3787c55b8a35b5d30be&" alt="Skeptikal">
                 <p>Skeptikal</p>
             </div>
-            <div class="profile" onclick="showBio('Res', 'This some big nigga type shit. - Res', 'https://cdn.discordapp.com/avatars/1195230544078835793/2fcd584876e9b6c79101f26f096524b8.webp?size=256')">
+            <div class="profile" onclick="showBio('Res', 'Im selling many thing ! - Res', 'https://cdn.discordapp.com/avatars/1195230544078835793/2fcd584876e9b6c79101f26f096524b8.webp?size=256')">
                 <img src="https://cdn.discordapp.com/avatars/1195230544078835793/2fcd584876e9b6c79101f26f096524b8.webp?size=256" alt="Skeptikal">
                 <p>Res</p>
             </div>
@@ -84,13 +85,9 @@
                 <img src="https://cdn.discordapp.com/avatars/1029036571774701739/ac8d8329649a1c2ef51e7c6bdab14ee9.webp?size=256" alt="Skeptikal">
                 <p>Dunger</p>
             </div>
-            <div class="profile" onclick="showBio('Qrystal', 'Extortion is like a fine wine, you just want to keep doing it - Qrystal', 'https://cdn.discordapp.com/attachments/1233836657128509533/1261501088608157696/cool-scottish-fold-cat-pfp-yyk608kp67kwyeuc.png?ex=66932ff1&is=6691de71&hm=4382ecce934eb1aecedc95d3c18babf9a182a06d8debdf207ada8139bd1d79c2&')">
-                <img src="https://cdn.discordapp.com/attachments/1233836657128509533/1261501088608157696/cool-scottish-fold-cat-pfp-yyk608kp67kwyeuc.png?ex=66932ff1&is=6691de71&hm=4382ecce934eb1aecedc95d3c18babf9a182a06d8debdf207ada8139bd1d79c2&" alt="Qrystal">
-                <p>Qrystal</p>
-            </div>
         </section>
 
-        <div id="bio-popup" class="bio-popup">
+        <div id="bio-popup" class="bio-popup">\
             <span class="close-btn" onclick="closeBioPopup()">&times;</span>
             <img id="bio-image" src="" alt="">
             <h2 id="bio-name"></h2>
