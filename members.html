@@ -84,6 +84,10 @@
                 <img src="https://cdn.discordapp.com/avatars/1029036571774701739/ac8d8329649a1c2ef51e7c6bdab14ee9.webp?size=256" alt="Skeptikal">
                 <p>Dunger</p>
             </div>
+            <div class="profile" onclick="showBio('Qrystal', 'Extortion is like a fine wine, you just want to keep doing it - Qrystal', 'https://cdn.discordapp.com/attachments/1233836657128509533/1261501088608157696/cool-scottish-fold-cat-pfp-yyk608kp67kwyeuc.png?ex=66932ff1&is=6691de71&hm=4382ecce934eb1aecedc95d3c18babf9a182a06d8debdf207ada8139bd1d79c2&')">
+                <img src="https://cdn.discordapp.com/attachments/1233836657128509533/1261501088608157696/cool-scottish-fold-cat-pfp-yyk608kp67kwyeuc.png?ex=66932ff1&is=6691de71&hm=4382ecce934eb1aecedc95d3c18babf9a182a06d8debdf207ada8139bd1d79c2&" alt="Qrystal">
+                <p>Qrystal</p>
+            </div>
         </section>
 
         <div id="bio-popup" class="bio-popup">
@@ -102,18 +106,15 @@
             document.getElementById('bio-text').textContent = bio;
             document.getElementById('bio-popup').style.display = 'block';
             
-            // Add event listener to close popup when clicking outside
             document.addEventListener('click', closeBioPopupOutside);
         }
 
         function closeBioPopup() {
             document.getElementById('bio-popup').style.display = 'none';
-            // Remove the event listener when popup is closed
             document.removeEventListener('click', closeBioPopupOutside);
         }
 
         function closeBioPopupOutside(event) {
-            // Close the popup if clicked outside of bio-popup
             if (!event.target.closest('.bio-popup') && !event.target.closest('.profile')) {
                 closeBioPopup();
             }
